@@ -1,0 +1,67 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 6 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 509 >>
+stream
+BT /F1 11 Tf 14 TL 50 790 Td
+(Patrones de arquitectura para herramientas locales.) '
+() '
+(Monolito modular: un único proceso con módulos bien separados. Reduce la complejidad) '
+(operativa frente a los microservicios y es la opción recomendada cuando un equipo pequeño) '
+(mantiene el sistema.) '
+() '
+(Event sourcing: en lugar de guardar solo el estado actual, se registra cada cambio como un) '
+(evento inmutable. Permite reconstruir el historial completo y auditar por qué cambió cada) '
+(dato.) '
+() '
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 406 >>
+stream
+BT /F1 11 Tf 14 TL 50 790 Td
+(Bases de datos embebidas: SQLite ofrece transacciones, búsqueda de texto completo con FTS5) '
+(y extensiones para búsqueda vectorial, sin un servidor separado. Es adecuado para) '
+(aplicaciones local-first.) '
+() '
+(Los microservicios con colas de mensajes como Redis aportan escalabilidad independiente,) '
+(pero exigen más memoria RAM y más trabajo de despliegue.) '
+() '
+ET
+endstream
+endobj
+8 0 obj
+<< /Producer (engram-tests) /Title (Patrones de arquitectura para herramientas locales) /CreationDate (D:20240420000000) >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000350 00000 n 
+0000000910 00000 n 
+0000001036 00000 n 
+0000001493 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R /Info 8 0 R >>
+startxref
+1632
+%%EOF

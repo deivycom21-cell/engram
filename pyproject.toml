@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "engram-memory"
+version = "0.1.0"
+description = "ENGRAM — a local-first second brain: store, connect, recall and reconstruct personal knowledge with verifiable provenance."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ENGRAM contributors" }]
+keywords = ["second-brain", "knowledge-graph", "local-first", "semantic-search", "memory"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "pydantic>=2.6",
+  "python-multipart>=0.0.9",
+  "pypdf>=4.0",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+# Neural embeddings (local ONNX model, ~120 MB download, runs on CPU)
+neural = ["onnxruntime>=1.17", "tokenizers>=0.15"]
+# Fast vector KNN inside SQLite (falls back to numpy if missing)
+vec = ["sqlite-vec>=0.1.6"]
+dev = ["pytest>=8", "httpx>=0.27"]
+all = ["onnxruntime>=1.17", "tokenizers>=0.15", "sqlite-vec>=0.1.6"]
+
+[project.scripts]
+engram = "engram.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["engram*"]
+
+[tool.setuptools.package-data]
+engram = ["frontend/*", "frontend/vendor/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,27 @@
+# Copy to <data_dir>/engram.toml (e.g. data/engram.toml) and adjust.
+# Every value is optional; environment variables ENGRAM_* override this file.
+
+# Embeddings: "auto" (local ONNX model if downloaded, else lexical fallback),
+# "onnx", "ollama" (local Ollama server), "hash" (non-neural), "none".
+embedding_provider = "auto"
+# ollama_url = "http://127.0.0.1:11434"
+# ollama_embed_model = "nomic-embed-text"
+onnx_threads = 2
+
+# Import limits
+max_file_mb = 25
+chunk_target_chars = 900
+
+# Relations: leave unset to use the provider's calibrated thresholds.
+# association_threshold = 0.55
+association_top_k = 5
+
+# Optional language model for reconstruction narratives (never required).
+# "none" | "ollama" (local) | "claude-cli" (EXTERNAL: sends evidence to Anthropic)
+llm_provider = "none"
+# ollama_llm_model = "llama3.2:3b"
+# Must be true, AND confirmed per request, before anything is sent to an external service.
+allow_external_llm = false
+
+host = "127.0.0.1"
+port = 7777

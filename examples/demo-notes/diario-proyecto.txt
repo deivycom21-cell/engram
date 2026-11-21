@@ -1,0 +1,11 @@
+Diario del proyecto
+
+2024-03-02 — Reunión con el equipo: acordamos que la herramienta de memoria para agentes de programación debe funcionar sin conexión y sin cuentas externas.
+
+2024-05-20 — Noté que Redis se queda sin memoria cuando el agente indexa repositorios grandes. Los reinicios borran la cola de tareas pendientes.
+
+2024-06-15 — Tras abandonar los microservicios, el monolito con SQLite arranca en 3 segundos y usa 300 MB de RAM. Seguimos con SQLite.
+
+Pregunta: ¿deberíamos volver a una arquitectura distribuida si algún día hay varios usuarios?
+
+2024-07-01 — Idea: usar event sourcing para registrar cada cambio de la memoria del agente, así se puede reconstruir por qué se tomó cada decisión.

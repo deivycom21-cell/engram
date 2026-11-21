@@ -1,0 +1,23 @@
+# Personal memory: never commit it
+data/
+*.db
+*.db-wal
+*.db-shm
+engram.toml
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
